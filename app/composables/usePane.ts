@@ -17,14 +17,24 @@ export function usePane<T extends Record<string, any>>(config: T) {
   }
 
   const params = reactive(data)
+  let myPane: Pane | null = null
 
   onMounted(() => {
-    if (!_pane) {
-      _pane = new Pane({ title: 'Config' })
+    if (_pane) {
+      _pane.dispose()
     }
+    _pane = new Pane({ title: 'Config' })
+    myPane = _pane
 
     for (const key of Object.keys(params)) {
       (_pane as any).addBinding(params, key, bindingOptions[key])
+    }
+  })
+
+  onUnmounted(() => {
+    if (_pane && _pane === myPane) {
+      _pane.dispose()
+      _pane = null
     }
   })
 

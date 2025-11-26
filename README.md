@@ -24,7 +24,7 @@ A straightforward starter template for building Proof of Concepts (POCs) quickly
 
 3. **Start coding**
 
-   Open `app/app.vue` to begin. We've provided an initial example in this file to get you going immediately. You can edit `app.vue` directly for your POC, or organize your code by creating new components in the `app/components` directory.
+   Create a new file in `app/pages/pocs/` (e.g. `app/pages/pocs/my-new-idea.vue`). It will automatically appear in the navigation menu. We've included `app/pages/pocs/my-first-poc.vue` as an example to get you started.
 
 ## Using the Config Pane
 
