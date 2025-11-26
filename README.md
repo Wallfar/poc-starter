@@ -26,6 +26,33 @@ A straightforward starter template for building Proof of Concepts (POCs) quickly
 
    Open `app/app.vue` to begin. We've provided an initial example in this file to get you going immediately. You can edit `app.vue` directly for your POC, or organize your code by creating new components in the `app/components` directory.
 
+## Using the Config Pane
+
+We've included a helper composable `usePane` to easily create a configuration pane for your POC parameters.
+
+```ts
+const params = usePane({
+  // Simple value
+  color: '#ff0000',
+  
+  // Value with options
+  size: {
+    default: 10,
+    min: 0,
+    max: 100,
+    step: 1,
+  }
+})
+```
+
+The `params` object is reactive, so you can use it directly in your template:
+
+```vue
+<div :style="{ color: params.color, fontSize: `${params.size}px` }">
+  Hello World
+</div>
+```
+
 ---
 
 ### Powered by [oneclick.dev](https://oneclick.dev)

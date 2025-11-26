@@ -1,16 +1,14 @@
 <script setup lang="ts">
-const params = reactive({
-  backgroundColor: '#000000',
+const params = usePane({
+  backgroundColor: '#67c270',
+  borderColor: '#0d8528',
   showBorder: true,
-  borderSize: 2
-})
-
-onMounted(() => {
-  const pane = usePane()
-
-  pane.addBinding(params, 'backgroundColor')
-  pane.addBinding(params, 'showBorder')
-  pane.addBinding(params, 'borderSize')
+  borderSize: {
+    default: 2,
+    min: 0,
+    max: 100,
+    step: 1,
+  }
 })
 </script>
 
@@ -21,7 +19,7 @@ onMounted(() => {
         class="p-4"
         :style="{
           backgroundColor: params.backgroundColor,
-          border: params.showBorder ? `${params.borderSize}px solid red` : 'none'
+          border: params.showBorder ? `${params.borderSize}px solid ${params.borderColor}` : 'none'
         }"
       >
         Hey there!
