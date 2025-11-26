@@ -1,76 +1,33 @@
-# Nuxt Minimal Starter
+# POC Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A straightforward starter template for building Proof of Concepts (POCs) quickly. We've set up the essentials so you can focus on your idea.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- **Nuxt 4** & **Tailwind CSS 4**
+- **Lucide**: A library of beautiful, customizable icons.
+- **[shadcn-vue](https://www.shadcn-vue.com/)**: Pre-installed and ready to use. You can easily copy-paste accessible components from their documentation directly into your project.
+- **Tweakpane**: Easy fine-tune parameters and debug your experiments.
 
-```bash
-# npm
-npm install
+## Quick Start
 
-# pnpm
-pnpm install
+1. **Install dependencies**
+   ```bash
+   pnpm i
+   ```
 
-# yarn
-yarn install
+2. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
+   The application will be available at `http://localhost:3000`.
 
-# bun
-bun install
-```
+3. **Start coding**
 
-## Development Server
+   Open `app/app.vue` to begin. We've provided an initial example in this file to get you going immediately. You can edit `app.vue` directly for your POC, or organize your code by creating new components in the `app/components` directory.
 
-Start the development server on `http://localhost:3000`:
+---
 
-```bash
-# npm
-npm run dev
+### Powered by [oneclick.dev](https://oneclick.dev)
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# poc-starter
+We create specialized software for developers. Check us out!
