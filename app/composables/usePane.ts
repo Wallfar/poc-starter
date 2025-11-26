@@ -2,7 +2,7 @@ import { Pane } from 'tweakpane'
 
 let _pane: Pane | null = null
 
-export function usePane(config: Record<string, any>) {
+export function usePane<T extends Record<string, any>>(config: T) {
   const data: Record<string, any> = {}
   const bindingOptions: Record<string, any> = {}
 
@@ -28,5 +28,5 @@ export function usePane(config: Record<string, any>) {
     }
   })
 
-  return params
+  return params as { [K in keyof T]: T[K] extends { default: infer D } ? D : T[K] }
 }
