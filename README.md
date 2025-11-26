@@ -5,8 +5,8 @@ A straightforward starter template for building Proof of Concepts (POCs) quickly
 ## Features
 
 - **Nuxt 4** & **Tailwind CSS 4**
-- **Lucide**: A library of beautiful, customizable icons.
-- **[shadcn-vue](https://www.shadcn-vue.com/)**: Pre-installed and ready to use. You can easily copy-paste accessible components from their documentation directly into your project.
+- **Lucide**: A library of beautiful icons.
+- **[shadcn-vue](https://www.shadcn-vue.com/)**: Ready to use. You can easily install components from their documentation directly into your project.
 - **Tweakpane**: Easy fine-tune parameters and debug your experiments.
 
 ## Quick Start
