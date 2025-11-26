@@ -22,7 +22,7 @@ const params = usePane({
           border: params.showBorder ? `${params.borderSize}px solid ${params.borderColor}` : 'none'
         }"
       >
-        Hey there!
+        Hello world!
       </div>
     </div>
   </NuxtLayout>
