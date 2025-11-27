@@ -53,7 +53,7 @@ const handlePocClick = (path: string) => {
       />
     </div>
 
-    <span v-if="route.path !== '/'" class="absolute top-4 left-4 select-none z-[9999999]">
+    <span v-if="route.path !== '/'" class="fixed top-4 left-4 select-none z-[9999999]">
       <Popover v-model:open="showPocSelector">
         <PopoverTrigger as-child>
           <Button>
@@ -102,7 +102,7 @@ const handlePocClick = (path: string) => {
     <Button
       variant="outline"
       @click="toggleColorMode"
-      class="absolute bottom-4 right-4 z-[9999999]"
+      class="fixed bottom-4 right-4 z-[9999999]"
     >
       <MoonIcon class="size-4" v-if="colorMode.value === 'dark'" />
       <SunIcon class="size-4" v-else />
