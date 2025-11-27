@@ -71,7 +71,7 @@ const handlePocClick = (path: string) => {
               No POCs found.
             </div>
 
-            <ul v-else class="grid gap-2">
+            <ul v-else class="grid gap-2 max-h-94 overflow-y-auto no-scrollbar">
               <li v-for="r in pocRoutes" :key="r.path">
                 <button 
                   @click="handlePocClick(r.path)"
