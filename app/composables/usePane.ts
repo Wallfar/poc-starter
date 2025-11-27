@@ -23,7 +23,10 @@ export function usePane<T extends Record<string, any>>(config: T) {
     if (_pane) {
       _pane.dispose()
     }
-    _pane = new Pane({ title: 'Config' })
+    _pane = new Pane({
+      container: document.getElementById('tpane') as HTMLElement,
+      title: 'Config'
+    })
     myPane = _pane
 
     for (const key of Object.keys(params)) {

@@ -97,15 +97,15 @@ const handlePocClick = (path: string) => {
       <slot />
     </div>
 
-    <div id="tpane" class="fixed top-4 right-4 min-w-[300px]" />
+    <div id="tpane" class="fixed top-4 right-4 min-w-[300px] z-[9999999]" />
 
     <Button
       variant="outline"
       @click="toggleColorMode"
       class="absolute bottom-4 right-4 z-[9999999]"
     >
-        <MoonIcon class="size-4" v-if="colorMode.value === 'dark'" />
-        <SunIcon class="size-4" v-else />
+      <MoonIcon class="size-4" v-if="colorMode.value === 'dark'" />
+      <SunIcon class="size-4" v-else />
     </Button>
   </div>
 </template>
